@@ -100,9 +100,7 @@ The backend exposes task CRUD operations. The frontend uses Axios to communicate
 - Implementing CRUD workflows
 - Testing API requests during development
 
-## Preview
 
-![Task Manager App Screenshot](screenshots/task-manager.png)
 
 ## Future Improvements
 
