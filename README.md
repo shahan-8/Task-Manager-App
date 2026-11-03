@@ -1,44 +1,45 @@
-# Todo App — Full-Stack CRUD Application
+# Task Manager App
 
-A full-stack Todo application built with React.js, Node.js, Express.js, and Axios. This project demonstrates how a React frontend communicates with a REST API to manage todo tasks.
+A full-stack task management application built with React and a Node.js/Express backend. It demonstrates how a frontend communicates with a REST API to create, view, update, complete, and delete tasks.
 
 ## Features
 
-- **Create Todos** — Add new tasks.
-- **Read Todos** — Display the list of tasks.
-- **Update Todos** — Edit task descriptions.
-- **Complete Tasks** — Mark tasks as completed or incomplete.
-- **Delete Todos** — Remove tasks.
-- **REST API** — Handle todo operations using Express.js.
-- **Responsive UI** — A user interface designed for everyday task management.
+- Create new tasks
+- View the task list
+- Edit task descriptions
+- Mark tasks as complete or incomplete
+- Delete tasks
+- REST API integration between frontend and backend
+- Responsive React interface
 
 ## Tech Stack
 
 **Frontend**
-- React.js
+- React
 - JavaScript
 - Axios
 - Lucide React
 - CSS
+- Vite
 
 **Backend**
 - Node.js
 - Express.js
 - REST API
+- UUID for task identifiers
 
 ## Project Structure
 
 ```text
-todo-app/
+Task-Manager-App/
 ├── frontend/
-│   ├── public/
 │   ├── src/
-│   ├── package.json
-│   └── ...
+│   ├── public/
+│   └── package.json
 ├── backend/
 │   ├── server.js
-│   ├── package.json
-│   └── ...
+│   └── package.json
+├── postman/          # API testing resources
 ├── .gitignore
 └── README.md
 ```
@@ -53,13 +54,13 @@ todo-app/
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd todo-app
+git clone https://github.com/shahan-8/Task-Manager-App.git
+cd Task-Manager-App
 ```
 
-Replace `YOUR_GITHUB_REPOSITORY_URL` with your repository's actual URL.
+### 2. Install and Start the Backend
 
-### 2. Start the Backend
+Open a terminal:
 
 ```bash
 cd backend
@@ -67,11 +68,11 @@ npm install
 npm run dev
 ```
 
-Keep the backend terminal running.
+Keep this terminal running. Check the backend terminal for the port it uses.
 
-### 3. Start the Frontend
+### 3. Install and Start the Frontend
 
-Open a second terminal:
+Open a second terminal from the project root:
 
 ```bash
 cd frontend
@@ -79,32 +80,33 @@ npm install
 npm run dev
 ```
 
-Open the local URL displayed by Vite in your terminal.
+Open the local URL printed by Vite.
 
-### Configuration
+## API Configuration
 
-Make sure the frontend API URL points to your running backend. Update the API URL and backend port to match your local configuration.
+The frontend must send requests to the URL where the Express backend is running. Check the API base URL in the frontend source and update it if your backend uses a different host or port.
 
-If environment variables are required, configure them locally using an appropriate `.env` file. Never commit real secrets to GitHub.
+## API Operations
 
-## What I Learned
+The backend exposes task CRUD operations. The frontend uses Axios to communicate with the API. Refer to the backend route definitions for the exact endpoint paths and request body shape.
 
-- Building reusable React components.
-- Managing state with React Hooks.
-- Handling asynchronous API requests with Axios.
-- Creating REST API endpoints with Express.js.
-- Connecting a frontend application to a backend server.
-- Implementing CRUD operations.
+## What I Practiced
+
+- Building reusable React components
+- Managing UI state with React Hooks
+- Making asynchronous HTTP requests with Axios
+- Creating REST endpoints with Express
+- Connecting frontend and backend applications
+- Implementing CRUD workflows
+- Testing API requests during development
 
 ## Future Improvements
 
-- MongoDB database integration.
-- User authentication.
-- Improved form validation and error handling.
-- Deployment of the frontend and backend.
+- Persistent database storage
+- User authentication
+- Stronger validation and error handling
+- Production deployment
 
 ## Author
 
-Developed as a full-stack JavaScript learning project.
-
-If you find this project useful, consider giving the repository a star!
+Built by [Shahan](https://github.com/shahan-8).
